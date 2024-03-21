@@ -5,5 +5,5 @@
 
 参数解释：
 - workdir 待编译项目路径
-- cmd 执行的maven解析命令
+- cmd 执行的maven解析依赖树命令
 - save 组件保存路径
