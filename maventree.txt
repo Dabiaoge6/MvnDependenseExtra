@@ -1,0 +1,955 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] mall-mbg                                                           [jar]
+[INFO] mall-admin                                                         [jar]
+[INFO] mall-search                                                        [jar]
+[INFO] mall-portal                                                        [jar]
+[INFO] mall-demo                                                          [jar]
+[INFO] mall                                                               [pom]
+[INFO]
+[INFO] ----------------------< com.macro.mall:mall-mbg >-----------------------
+[INFO] Building mall-mbg 1.0-SNAPSHOT                                     [1/6]
+[INFO]   from mall-mbg\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mall-mbg ---
+[INFO] com.macro.mall:mall-mbg:jar:1.0-SNAPSHOT
+[INFO] +- org.mybatis.generator:mybatis-generator-core:jar:1.3.3:compile
+[INFO] +- org.mybatis:mybatis:jar:3.4.2:compile
+[INFO] \- mysql:mysql-connector-java:jar:5.1.46:compile
+[INFO]
+[INFO] ---------------------< com.macro.mall:mall-admin >----------------------
+[INFO] Building mall-admin 0.0.1-SNAPSHOT                                 [2/6]
+[INFO]   from mall-admin\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.alibaba:druid:jar:1.1.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO]
+[INFO] --- dependency:2.10:tree (default-cli) @ mall-admin ---
+[WARNING] Using Maven 2 dependency tree to get verbose output, which may be inconsistent with actual Maven 3 resolution
+[WARNING] Invalid POM for com.alibaba:druid:jar:1.1.10, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] com.macro.mall:mall-admin:jar:0.0.1-SNAPSHOT
+[INFO] +- com.macro.mall:mall-mbg:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- org.mybatis.generator:mybatis-generator-core:jar:1.3.3:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.4.2:compile
+[INFO] |  \- mysql:mysql-connector-java:jar:5.1.46:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:1.5.14.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.12.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.1.11:compile
+[INFO] |  |  |  |  +- (ch.qos.logback:logback-core:jar:1.1.11:compile - version managed from 1.1.6; omitted for duplicate)
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.6.3; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  \- org.slf4j:log4j-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |     \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-core:jar:4.3.18.RELEASE:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.17:runtime
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile
+[INFO] |  |  |  \- org.apache.tomcat:tomcat-annotations-api:jar:8.5.31:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.31:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.31:compile
+[INFO] |  |     \- (org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile - omitted for duplicate)
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.3.6.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile (version managed from 3.3.0.Final)
+[INFO] |  |  \- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile (version managed from 2.8.10)
+[INFO] |  +- org.springframework:spring-web:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-beans:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-context:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework:spring-webmvc:jar:4.3.18.RELEASE:compile
+[INFO] |     +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- org.springframework:spring-expression:jar:4.3.18.RELEASE:compile
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework:spring-aop:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework.security:spring-security-config:jar:4.2.7.RELEASE:compile
+[INFO] |  |  +- org.springframework.security:spring-security-core:jar:4.2.7.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework.security:spring-security-web:jar:4.2.7.RELEASE:compile
+[INFO] |     +- (org.springframework.security:spring-security-core:jar:4.2.7.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.2.0:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:1.5.14.RELEASE:compile (version managed from 1.4.3.RELEASE)
+[INFO] |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.apache.tomcat:tomcat-jdbc:jar:8.5.31:compile
+[INFO] |  |  |  \- org.apache.tomcat:tomcat-juli:jar:8.5.31:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:4.3.18.RELEASE:compile
+[INFO] |  |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     \- org.springframework:spring-tx:jar:4.3.18.RELEASE:compile
+[INFO] |  |        +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |        \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.2.0:compile
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  +- (org.mybatis:mybatis:jar:3.4.2:compile - omitted for duplicate)
+[INFO] |  \- org.mybatis:mybatis-spring:jar:1.3.1:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  \- org.springframework.boot:spring-boot-actuator:jar:1.5.14.RELEASE:compile
+[INFO] |     +- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |     +- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:1.5.14.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test
+[INFO] |  |  \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:1.5.14.RELEASE:test
+[INFO] |  |  +- (org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:test - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.2.0:test
+[INFO] |  |  +- net.minidev:json-smart:jar:2.2.1:test
+[INFO] |  |  |  \- net.minidev:accessors-smart:jar:1.1:test
+[INFO] |  |  |     \- org.ow2.asm:asm:jar:5.0.3:test
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.16; scope updated from test; omitted for duplicate)
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.assertj:assertj-core:jar:2.6.0:test
+[INFO] |  +- org.mockito:mockito-core:jar:1.10.19:test
+[INFO] |  |  +- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.1:test
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.4.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - scope updated from test; omitted for duplicate)
+[INFO] |  \- org.springframework:spring-test:jar:4.3.18.RELEASE:test
+[INFO] |     \- (org.springframework:spring-core:jar:4.3.18.RELEASE:test - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-aop:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.aspectj:aspectjweaver:jar:1.8.13:compile
+[INFO] +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.2.3:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  +- (org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1:compile - omitted for conflict with 1.2.0)
+[INFO] |  +- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.2.3:compile
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  \- com.github.pagehelper:pagehelper:jar:5.1.2:compile
+[INFO] |     \- com.github.jsqlparser:jsqlparser:jar:1.0:compile
+[INFO] +- io.springfox:springfox-swagger2:jar:2.6.1:compile
+[INFO] |  +- io.swagger:swagger-annotations:jar:1.5.10:compile
+[INFO] |  +- io.swagger:swagger-models:jar:1.5.10:compile
+[INFO] |  |  +- (com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile - version managed from 2.4.5; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  \- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spi:jar:2.6.1:compile
+[INFO] |  |  \- io.springfox:springfox-core:jar:2.6.1:compile
+[INFO] |  |     +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |     +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |     +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |     +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-schema:jar:2.6.1:compile
+[INFO] |  |  +- (io.springfox:springfox-core:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-swagger-common:jar:2.6.1:compile
+[INFO] |  |  +- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.swagger:swagger-models:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-schema:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spring-web:jar:2.6.1:compile
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- com.google.guava:guava:jar:18.0:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.3.4:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  \- org.mapstruct:mapstruct:jar:1.0.0.Final:compile
+[INFO] +- io.springfox:springfox-swagger-ui:jar:2.6.1:compile
+[INFO] |  \- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] +- io.jsonwebtoken:jjwt:jar:0.9.0:compile
+[INFO] |  \- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile - version managed from 2.8.9; omitted for duplicate)
+[INFO] +- com.aliyun.oss:aliyun-sdk-oss:jar:2.5.0:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.5:compile (version managed from 4.4.1)
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.9:compile
+[INFO] |  |  \- commons-codec:commons-codec:jar:1.10:compile
+[INFO] |  +- org.jdom:jdom:jar:1.1:compile
+[INFO] |  \- net.sf.json-lib:json-lib:jar:jdk15:2.4:compile
+[INFO] |     +- commons-beanutils:commons-beanutils:jar:1.9.3:compile (version managed from 1.8.0)
+[INFO] |     |  \- (commons-collections:commons-collections:jar:3.2.2:compile - version managed from 3.2.1; omitted for duplicate)
+[INFO] |     +- commons-collections:commons-collections:jar:3.2.2:compile
+[INFO] |     +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |     +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |     \- net.sf.ezmorph:ezmorph:jar:1.0.6:compile
+[INFO] |        \- (commons-lang:commons-lang:jar:2.3:compile - omitted for conflict with 2.5)
+[INFO] +- net.logstash.logback:logstash-logback-encoder:jar:4.8:compile
+[INFO] |  +- ch.qos.logback:logback-core:jar:1.1.11:compile
+[INFO] |  \- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile - version managed from 2.6.5; omitted for duplicate)
+[INFO] +- com.alibaba:druid-spring-boot-starter:jar:1.1.10:compile
+[INFO] |  +- com.alibaba:druid:jar:1.1.10:compile
+[INFO] |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile
+[INFO] |     \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] \- org.projectlombok:lombok:jar:1.16.22:compile
+[INFO]
+[INFO] ---------------------< com.macro.mall:mall-search >---------------------
+[INFO] Building mall-search 0.0.1-SNAPSHOT                                [3/6]
+[INFO]   from mall-search\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- dependency:2.10:tree (default-cli) @ mall-search ---
+[WARNING] Using Maven 2 dependency tree to get verbose output, which may be inconsistent with actual Maven 3 resolution
+[INFO] com.macro.mall:mall-search:jar:0.0.1-SNAPSHOT
+[INFO] +- com.macro.mall:mall-mbg:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- org.mybatis.generator:mybatis-generator-core:jar:1.3.3:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.4.2:compile
+[INFO] |  \- mysql:mysql-connector-java:jar:5.1.46:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-elasticsearch:jar:1.5.14.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.12.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.1.11:compile
+[INFO] |  |  |  |  +- ch.qos.logback:logback-core:jar:1.1.11:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  \- org.slf4j:log4j-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |     \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-core:jar:4.3.18.RELEASE:compile
+[INFO] |  |  \- (org.yaml:snakeyaml:jar:1.17:compile - scope updated from runtime; omitted for duplicate)
+[INFO] |  \- org.springframework.data:spring-data-elasticsearch:jar:2.1.13.RELEASE:compile
+[INFO] |     +- org.springframework:spring-context:jar:4.3.18.RELEASE:compile
+[INFO] |     |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  \- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- org.springframework:spring-tx:jar:4.3.18.RELEASE:compile
+[INFO] |     |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- org.springframework.data:spring-data-commons:jar:1.13.13.RELEASE:compile
+[INFO] |     |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |     |  \- (org.slf4j:jcl-over-slf4j:jar:1.7.25:runtime - omitted for duplicate)
+[INFO] |     +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |     +- joda-time:joda-time:jar:2.9.9:compile
+[INFO] |     +- org.elasticsearch:elasticsearch:jar:2.4.6:compile (version managed from 2.4.0)
+[INFO] |     |  +- org.apache.lucene:lucene-core:jar:5.5.4:compile
+[INFO] |     |  +- org.apache.lucene:lucene-backward-codecs:jar:5.5.4:compile
+[INFO] |     |  |  \- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  +- org.apache.lucene:lucene-analyzers-common:jar:5.5.4:compile
+[INFO] |     |  |  \- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  +- org.apache.lucene:lucene-queries:jar:5.5.4:compile
+[INFO] |     |  |  \- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  +- org.apache.lucene:lucene-memory:jar:5.5.4:compile
+[INFO] |     |  |  \- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  +- org.apache.lucene:lucene-highlighter:jar:5.5.4:compile
+[INFO] |     |  |  +- (org.apache.lucene:lucene-analyzers-common:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- (org.apache.lucene:lucene-join:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- (org.apache.lucene:lucene-memory:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  \- (org.apache.lucene:lucene-queries:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  +- org.apache.lucene:lucene-queryparser:jar:5.5.4:compile
+[INFO] |     |  |  +- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- (org.apache.lucene:lucene-queries:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  \- org.apache.lucene:lucene-sandbox:jar:5.5.4:compile
+[INFO] |     |  +- org.apache.lucene:lucene-suggest:jar:5.5.4:compile
+[INFO] |     |  |  +- (org.apache.lucene:lucene-analyzers-common:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- org.apache.lucene:lucene-misc:jar:5.5.4:compile
+[INFO] |     |  |  \- (org.apache.lucene:lucene-queries:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  +- org.apache.lucene:lucene-join:jar:5.5.4:compile
+[INFO] |     |  |  +- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  \- org.apache.lucene:lucene-grouping:jar:5.5.4:compile
+[INFO] |     |  +- org.apache.lucene:lucene-spatial:jar:5.5.4:compile
+[INFO] |     |  |  +- (org.apache.lucene:lucene-core:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- (org.apache.lucene:lucene-misc:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- (org.apache.lucene:lucene-queries:jar:5.5.4:compile - omitted for duplicate)
+[INFO] |     |  |  +- org.apache.lucene:lucene-spatial3d:jar:5.5.4:compile
+[INFO] |     |  |  \- com.spatial4j:spatial4j:jar:0.5:compile
+[INFO] |     |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |     |  +- org.elasticsearch:securesm:jar:1.0:compile
+[INFO] |     |  +- com.carrotsearch:hppc:jar:0.7.1:compile
+[INFO] |     |  +- (joda-time:joda-time:jar:2.9.9:compile - version managed from 2.9.5; omitted for duplicate)
+[INFO] |     |  +- (com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile - version managed from 2.8.1; omitted for duplicate)
+[INFO] |     |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-smile:jar:2.8.11:compile (version managed from 2.8.1)
+[INFO] |     |  |  \- (com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile - version managed from 2.8.1; omitted for duplicate)
+[INFO] |     |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.8.11:compile (version managed from 2.8.1)
+[INFO] |     |  |  +- (com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile - version managed from 2.8.1; omitted for duplicate)
+[INFO] |     |  |  \- (org.yaml:snakeyaml:jar:1.17:compile - version managed from 1.15; omitted for duplicate)
+[INFO] |     |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.8.11:compile (version managed from 2.8.1)
+[INFO] |     |  |  \- (com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile - version managed from 2.8.1; omitted for duplicate)
+[INFO] |     |  +- org.yaml:snakeyaml:jar:1.17:compile
+[INFO] |     |  +- io.netty:netty:jar:3.10.6.Final:compile
+[INFO] |     |  +- com.ning:compress-lzf:jar:1.0.2:compile
+[INFO] |     |  +- com.tdunning:t-digest:jar:3.0:compile
+[INFO] |     |  +- org.hdrhistogram:HdrHistogram:jar:2.1.6:compile
+[INFO] |     |  +- commons-cli:commons-cli:jar:1.3.1:compile
+[INFO] |     |  \- com.twitter:jsr166e:jar:1.1.0:compile
+[INFO] |     +- com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile
+[INFO] |     +- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile - omitted for duplicate)
+[INFO] |     +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |     \- (org.slf4j:jcl-over-slf4j:jar:1.7.25:compile - scope updated from runtime; omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile
+[INFO] |  |  |  \- org.apache.tomcat:tomcat-annotations-api:jar:8.5.31:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.31:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.31:compile
+[INFO] |  |     \- (org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile - omitted for duplicate)
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.3.6.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile (version managed from 3.3.0.Final)
+[INFO] |  |  \- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |  |  \- (com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile - version managed from 2.8.10; omitted for duplicate)
+[INFO] |  +- org.springframework:spring-web:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-beans:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework:spring-webmvc:jar:4.3.18.RELEASE:compile
+[INFO] |     +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- org.springframework:spring-expression:jar:4.3.18.RELEASE:compile
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:1.5.14.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test
+[INFO] |  |  \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:1.5.14.RELEASE:test
+[INFO] |  |  +- (org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.2.0:test
+[INFO] |  |  +- net.minidev:json-smart:jar:2.2.1:test
+[INFO] |  |  |  \- net.minidev:accessors-smart:jar:1.1:test
+[INFO] |  |  |     \- org.ow2.asm:asm:jar:5.0.3:test
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:test - version managed from 1.7.16; omitted for duplicate)
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.assertj:assertj-core:jar:2.6.0:test
+[INFO] |  +- org.mockito:mockito-core:jar:1.10.19:test
+[INFO] |  |  +- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.1:test
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.4.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - scope updated from test; omitted for duplicate)
+[INFO] |  \- org.springframework:spring-test:jar:4.3.18.RELEASE:test
+[INFO] |     \- (org.springframework:spring-core:jar:4.3.18.RELEASE:test - omitted for duplicate)
+[INFO] +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.2.3:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1:compile
+[INFO] |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.6.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:1.5.14.RELEASE:compile (version managed from 1.5.6.RELEASE)
+[INFO] |  |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.6.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- org.apache.tomcat:tomcat-jdbc:jar:8.5.31:compile
+[INFO] |  |  |  |  \- org.apache.tomcat:tomcat-juli:jar:8.5.31:compile
+[INFO] |  |  |  \- org.springframework:spring-jdbc:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     \- (org.springframework:spring-tx:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.3.1:compile
+[INFO] |  |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.6.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.mybatis:mybatis:jar:3.4.5:compile - omitted for conflict with 3.4.2)
+[INFO] |  |  \- org.mybatis:mybatis-spring:jar:1.3.1:compile
+[INFO] |  +- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.2.3:compile
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  \- com.github.pagehelper:pagehelper:jar:5.1.2:compile
+[INFO] |     \- com.github.jsqlparser:jsqlparser:jar:1.0:compile
+[INFO] +- io.springfox:springfox-swagger2:jar:2.6.1:compile
+[INFO] |  +- io.swagger:swagger-annotations:jar:1.5.10:compile
+[INFO] |  +- io.swagger:swagger-models:jar:1.5.10:compile
+[INFO] |  |  +- (com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile - version managed from 2.4.5; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.6.3; omitted for duplicate)
+[INFO] |  |  \- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spi:jar:2.6.1:compile
+[INFO] |  |  \- io.springfox:springfox-core:jar:2.6.1:compile
+[INFO] |  |     +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |     +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |     +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |     +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-schema:jar:2.6.1:compile
+[INFO] |  |  +- (io.springfox:springfox-core:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-swagger-common:jar:2.6.1:compile
+[INFO] |  |  +- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.swagger:swagger-models:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-schema:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spring-web:jar:2.6.1:compile
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- com.google.guava:guava:jar:18.0:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.3.4:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  \- org.mapstruct:mapstruct:jar:1.0.0.Final:compile
+[INFO] +- io.springfox:springfox-swagger-ui:jar:2.6.1:compile
+[INFO] |  \- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] \- com.alibaba:druid-spring-boot-starter:jar:1.1.10:compile
+[INFO]    +- com.alibaba:druid:jar:1.1.10:compile
+[INFO]    +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile
+[INFO]       \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO]
+[INFO] ---------------------< com.macro.mall:mall-portal >---------------------
+[INFO] Building mall-portal 0.0.1-SNAPSHOT                                [4/6]
+[INFO]   from mall-portal\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- dependency:2.10:tree (default-cli) @ mall-portal ---
+[WARNING] Using Maven 2 dependency tree to get verbose output, which may be inconsistent with actual Maven 3 resolution
+[INFO] com.macro.mall:mall-portal:jar:0.0.1-SNAPSHOT
+[INFO] +- com.macro.mall:mall-mbg:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- org.mybatis.generator:mybatis-generator-core:jar:1.3.3:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.4.2:compile
+[INFO] |  \- mysql:mysql-connector-java:jar:5.1.46:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-mongodb:jar:1.5.14.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.12.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.1.11:compile
+[INFO] |  |  |  |  +- ch.qos.logback:logback-core:jar:1.1.11:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  \- org.slf4j:log4j-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |     \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-core:jar:4.3.18.RELEASE:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.17:runtime
+[INFO] |  +- org.mongodb:mongodb-driver:jar:3.4.3:compile
+[INFO] |  |  +- org.mongodb:mongodb-driver-core:jar:3.4.3:compile
+[INFO] |  |  |  \- (org.mongodb:bson:jar:3.4.3:compile - omitted for duplicate)
+[INFO] |  |  \- org.mongodb:bson:jar:3.4.3:compile
+[INFO] |  \- org.springframework.data:spring-data-mongodb:jar:1.10.13.RELEASE:compile
+[INFO] |     +- org.springframework:spring-tx:jar:4.3.18.RELEASE:compile
+[INFO] |     |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |     +- org.springframework:spring-beans:jar:4.3.18.RELEASE:compile
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- org.springframework:spring-expression:jar:4.3.18.RELEASE:compile
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- org.springframework.data:spring-data-commons:jar:1.13.13.RELEASE:compile
+[INFO] |     |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |     |  \- (org.slf4j:jcl-over-slf4j:jar:1.7.25:runtime - omitted for duplicate)
+[INFO] |     +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |     \- (org.slf4j:jcl-over-slf4j:jar:1.7.25:compile - scope updated from runtime; omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile
+[INFO] |  |  |  \- org.apache.tomcat:tomcat-annotations-api:jar:8.5.31:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.31:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.31:compile
+[INFO] |  |     \- (org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile - omitted for duplicate)
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.3.6.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile (version managed from 3.3.0.Final)
+[INFO] |  |  \- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile (version managed from 2.8.10)
+[INFO] |  +- org.springframework:spring-web:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework:spring-webmvc:jar:4.3.18.RELEASE:compile
+[INFO] |     +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework:spring-aop:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework.security:spring-security-config:jar:4.2.7.RELEASE:compile
+[INFO] |  |  +- org.springframework.security:spring-security-core:jar:4.2.7.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework.security:spring-security-web:jar:4.2.7.RELEASE:compile
+[INFO] |     +- (org.springframework.security:spring-security-core:jar:4.2.7.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:1.5.14.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test
+[INFO] |  |  \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:1.5.14.RELEASE:test
+[INFO] |  |  +- (org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.2.0:test
+[INFO] |  |  +- net.minidev:json-smart:jar:2.2.1:test
+[INFO] |  |  |  \- net.minidev:accessors-smart:jar:1.1:test
+[INFO] |  |  |     \- org.ow2.asm:asm:jar:5.0.3:test
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:test - version managed from 1.7.16; omitted for duplicate)
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.assertj:assertj-core:jar:2.6.0:test
+[INFO] |  +- org.mockito:mockito-core:jar:1.10.19:test
+[INFO] |  |  +- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.1:test
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.4.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - scope updated from test; omitted for duplicate)
+[INFO] |  \- org.springframework:spring-test:jar:4.3.18.RELEASE:test
+[INFO] |     \- (org.springframework:spring-core:jar:4.3.18.RELEASE:test - omitted for duplicate)
+[INFO] +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.2.3:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1:compile
+[INFO] |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.6.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:1.5.14.RELEASE:compile (version managed from 1.5.6.RELEASE)
+[INFO] |  |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.6.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- org.apache.tomcat:tomcat-jdbc:jar:8.5.31:compile
+[INFO] |  |  |  |  \- org.apache.tomcat:tomcat-juli:jar:8.5.31:compile
+[INFO] |  |  |  \- org.springframework:spring-jdbc:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     \- (org.springframework:spring-tx:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.3.1:compile
+[INFO] |  |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.6.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.mybatis:mybatis:jar:3.4.5:compile - omitted for conflict with 3.4.2)
+[INFO] |  |  \- org.mybatis:mybatis-spring:jar:1.3.1:compile
+[INFO] |  +- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.2.3:compile
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  \- com.github.pagehelper:pagehelper:jar:5.1.2:compile
+[INFO] |     \- com.github.jsqlparser:jsqlparser:jar:1.0:compile
+[INFO] +- io.springfox:springfox-swagger2:jar:2.6.1:compile
+[INFO] |  +- io.swagger:swagger-annotations:jar:1.5.10:compile
+[INFO] |  +- io.swagger:swagger-models:jar:1.5.10:compile
+[INFO] |  |  +- (com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile - version managed from 2.4.5; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.6.3; omitted for duplicate)
+[INFO] |  |  \- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spi:jar:2.6.1:compile
+[INFO] |  |  \- io.springfox:springfox-core:jar:2.6.1:compile
+[INFO] |  |     +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |     +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |     +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |     +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-schema:jar:2.6.1:compile
+[INFO] |  |  +- (io.springfox:springfox-core:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-swagger-common:jar:2.6.1:compile
+[INFO] |  |  +- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.swagger:swagger-models:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-schema:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spring-web:jar:2.6.1:compile
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- com.google.guava:guava:jar:18.0:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.3.4:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  \- org.mapstruct:mapstruct:jar:1.0.0.Final:compile
+[INFO] +- io.springfox:springfox-swagger-ui:jar:2.6.1:compile
+[INFO] |  \- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-cache:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.6.RELEASE; omitted for duplicate)
+[INFO] |  +- org.springframework:spring-context:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework:spring-context-support:jar:4.3.18.RELEASE:compile
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-redis:jar:1.3.8.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.3.8.RELEASE; omitted for duplicate)
+[INFO] |  +- org.springframework.data:spring-data-redis:jar:1.8.13.RELEASE:compile (version managed from 1.6.5.RELEASE)
+[INFO] |  |  +- org.springframework.data:spring-data-keyvalue:jar:1.2.13.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework.data:spring-data-commons:jar:1.13.13.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-tx:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  |  |  \- (org.slf4j:jcl-over-slf4j:jar:1.7.25:runtime - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-tx:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-oxm:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context-support:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:jcl-over-slf4j:jar:1.7.25:compile - scope updated from runtime; omitted for duplicate)
+[INFO] |  \- redis.clients:jedis:jar:2.9.0:compile (version managed from 2.7.3)
+[INFO] |     \- org.apache.commons:commons-pool2:jar:2.4.3:compile (version managed from 2.4.2)
+[INFO] +- com.alibaba:druid-spring-boot-starter:jar:1.1.10:compile
+[INFO] |  +- com.alibaba:druid:jar:1.1.10:compile
+[INFO] |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile
+[INFO] |     \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-amqp:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.3.8.RELEASE; omitted for duplicate)
+[INFO] |  +- org.springframework:spring-messaging:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework.amqp:spring-rabbit:jar:1.7.8.RELEASE:compile
+[INFO] |     +- (org.springframework:spring-tx:jar:4.3.18.RELEASE:compile - version managed from 4.3.15.RELEASE; omitted for duplicate)
+[INFO] |     +- org.springframework.amqp:spring-amqp:jar:1.7.8.RELEASE:compile
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - version managed from 4.3.15.RELEASE; omitted for duplicate)
+[INFO] |     +- org.springframework.retry:spring-retry:jar:1.2.2.RELEASE:compile
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - version managed from 4.3.13.RELEASE; omitted for duplicate)
+[INFO] |     +- com.rabbitmq:http-client:jar:1.1.1.RELEASE:compile
+[INFO] |     |  +- org.apache.httpcomponents:httpclient:jar:4.5.5:compile (version managed from 4.3.6)
+[INFO] |     |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.9:compile
+[INFO] |     |  |  \- commons-codec:commons-codec:jar:1.10:compile
+[INFO] |     |  \- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile - version managed from 2.8.4; omitted for duplicate)
+[INFO] |     +- com.rabbitmq:amqp-client:jar:4.0.3:compile
+[INFO] |     |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-messaging:jar:4.3.18.RELEASE:compile - version managed from 4.3.15.RELEASE; omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.3.15.RELEASE; omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - version managed from 4.3.15.RELEASE; omitted for duplicate)
+[INFO] \- org.projectlombok:lombok:jar:1.16.22:compile
+[INFO]
+[INFO] ----------------------< com.macro.mall:mall-demo >----------------------
+[INFO] Building mall-demo 0.0.1-SNAPSHOT                                  [5/6]
+[INFO]   from mall-demo\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- dependency:2.10:tree (default-cli) @ mall-demo ---
+[WARNING] Using Maven 2 dependency tree to get verbose output, which may be inconsistent with actual Maven 3 resolution
+[INFO] com.macro.mall:mall-demo:jar:0.0.1-SNAPSHOT
+[INFO] +- com.macro.mall:mall-mbg:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- org.mybatis.generator:mybatis-generator-core:jar:1.3.3:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.4.2:compile
+[INFO] |  \- mysql:mysql-connector-java:jar:5.1.46:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:1.5.14.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:1.5.14.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.1.11:compile
+[INFO] |  |  |  |  +- (ch.qos.logback:logback-core:jar:1.1.11:compile - version managed from 1.1.6; omitted for duplicate)
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.6.6; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
+[INFO] |  |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  |  \- org.slf4j:log4j-over-slf4j:jar:1.7.25:compile
+[INFO] |  |  |     \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.22; omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-core:jar:4.3.18.RELEASE:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.17:runtime
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:1.5.14.RELEASE:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile
+[INFO] |  |  |  \- org.apache.tomcat:tomcat-annotations-api:jar:8.5.31:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.31:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.31:compile
+[INFO] |  |     \- (org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.31:compile - omitted for duplicate)
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.3.6.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile (version managed from 3.3.0.Final)
+[INFO] |  |  \- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.8.11:compile (version managed from 2.8.10)
+[INFO] |  +- org.springframework:spring-web:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-beans:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-context:jar:4.3.18.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework:spring-webmvc:jar:4.3.18.RELEASE:compile
+[INFO] |     +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- org.springframework:spring-expression:jar:4.3.18.RELEASE:compile
+[INFO] |     |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-thymeleaf:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- (org.springframework.boot:spring-boot-starter-web:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.thymeleaf:thymeleaf-spring4:jar:2.1.6.RELEASE:compile
+[INFO] |  |  +- org.thymeleaf:thymeleaf:jar:2.1.6.RELEASE:compile
+[INFO] |  |  |  +- ognl:ognl:jar:3.0.8:compile
+[INFO] |  |  |  +- org.javassist:javassist:jar:3.21.0-GA:compile (version managed from 3.16.1-GA)
+[INFO] |  |  |  +- org.unbescape:unbescape:jar:1.1.0.RELEASE:compile
+[INFO] |  |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.6.6; omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  \- nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:jar:1.4.0:compile
+[INFO] |     +- org.codehaus.groovy:groovy:jar:2.4.15:compile (version managed from 2.4.3)
+[INFO] |     \- (org.thymeleaf:thymeleaf:jar:2.1.6.RELEASE:compile - version managed from 2.1.4.RELEASE; omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework:spring-aop:jar:4.3.18.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.springframework.security:spring-security-config:jar:4.2.7.RELEASE:compile
+[INFO] |  |  +- org.springframework.security:spring-security-core:jar:4.2.7.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  \- org.springframework.security:spring-security-web:jar:4.2.7.RELEASE:compile
+[INFO] |     +- (org.springframework.security:spring-security-core:jar:4.2.7.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-expression:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-web:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.2.0:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:1.5.14.RELEASE:compile (version managed from 1.4.3.RELEASE)
+[INFO] |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.apache.tomcat:tomcat-jdbc:jar:8.5.31:compile
+[INFO] |  |  |  \- org.apache.tomcat:tomcat-juli:jar:8.5.31:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:4.3.18.RELEASE:compile
+[INFO] |  |     +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     \- org.springframework:spring-tx:jar:4.3.18.RELEASE:compile
+[INFO] |  |        +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  |        \- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.2.0:compile
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  +- (org.mybatis:mybatis:jar:3.4.2:compile - omitted for duplicate)
+[INFO] |  \- org.mybatis:mybatis-spring:jar:1.3.1:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:1.5.14.RELEASE:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  \- org.springframework.boot:spring-boot-actuator:jar:1.5.14.RELEASE:compile
+[INFO] |     +- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |     +- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile - omitted for duplicate)
+[INFO] |     +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] |     \- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - omitted for duplicate)
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:1.5.14.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test
+[INFO] |  |  \- (org.springframework.boot:spring-boot:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:1.5.14.RELEASE:test
+[INFO] |  |  +- (org.springframework.boot:spring-boot-test:jar:1.5.14.RELEASE:test - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:test - version managed from 1.4.3.RELEASE; omitted for duplicate)
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.2.0:test
+[INFO] |  |  +- net.minidev:json-smart:jar:2.2.1:test
+[INFO] |  |  |  \- net.minidev:accessors-smart:jar:1.1:test
+[INFO] |  |  |     \- org.ow2.asm:asm:jar:5.0.3:test
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:test - version managed from 1.7.16; omitted for duplicate)
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.assertj:assertj-core:jar:2.6.0:test
+[INFO] |  +- org.mockito:mockito-core:jar:1.10.19:test
+[INFO] |  |  +- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.1:test
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO] |  |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.4.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- (org.springframework:spring-core:jar:4.3.18.RELEASE:compile - scope updated from test; omitted for duplicate)
+[INFO] |  \- org.springframework:spring-test:jar:4.3.18.RELEASE:test
+[INFO] |     \- (org.springframework:spring-core:jar:4.3.18.RELEASE:test - omitted for duplicate)
+[INFO] +- io.springfox:springfox-swagger2:jar:2.6.1:compile
+[INFO] |  +- io.swagger:swagger-annotations:jar:1.5.10:compile
+[INFO] |  +- io.swagger:swagger-models:jar:1.5.10:compile
+[INFO] |  |  +- (com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile - version managed from 2.4.5; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.6.3; omitted for duplicate)
+[INFO] |  |  \- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spi:jar:2.6.1:compile
+[INFO] |  |  \- io.springfox:springfox-core:jar:2.6.1:compile
+[INFO] |  |     +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |     +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |     +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |     +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |     \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-schema:jar:2.6.1:compile
+[INFO] |  |  +- (io.springfox:springfox-core:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-swagger-common:jar:2.6.1:compile
+[INFO] |  |  +- (io.swagger:swagger-annotations:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.swagger:swagger-models:jar:1.5.10:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-schema:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  +- io.springfox:springfox-spring-web:jar:2.6.1:compile
+[INFO] |  |  +- (com.google.guava:guava:jar:18.0:compile - omitted for duplicate)
+[INFO] |  |  +- (com.fasterxml:classmate:jar:1.3.4:compile - version managed from 1.3.1; omitted for duplicate)
+[INFO] |  |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.21; omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (io.springfox:springfox-spi:jar:2.6.1:compile - omitted for duplicate)
+[INFO] |  +- com.google.guava:guava:jar:18.0:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.3.4:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework:spring-beans:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-context:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  +- (org.springframework:spring-aop:jar:4.3.18.RELEASE:compile - version managed from 4.0.9.RELEASE; omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- (org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - version managed from 1.7.10; omitted for duplicate)
+[INFO] |  \- org.mapstruct:mapstruct:jar:1.0.0.Final:compile
+[INFO] +- io.springfox:springfox-swagger-ui:jar:2.6.1:compile
+[INFO] |  \- (io.springfox:springfox-spring-web:jar:2.6.1:compile - omitted for duplicate)
+[INFO] +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.2.3:compile
+[INFO] |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  +- (org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.1:compile - omitted for conflict with 1.2.0)
+[INFO] |  +- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.2.3:compile
+[INFO] |  |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.14.RELEASE:compile - version managed from 1.5.7.RELEASE; omitted for duplicate)
+[INFO] |  \- com.github.pagehelper:pagehelper:jar:5.1.2:compile
+[INFO] |     \- com.github.jsqlparser:jsqlparser:jar:1.0:compile
+[INFO] \- net.logstash.logback:logstash-logback-encoder:jar:4.8:compile
+[INFO]    +- ch.qos.logback:logback-core:jar:1.1.11:compile
+[INFO]    \- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.11.2:compile - version managed from 2.6.5; omitted for duplicate)
+[INFO]
+[INFO] ------------------------< com.macro.mall:mall >-------------------------
+[INFO] Building mall 1.0-SNAPSHOT                                         [6/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mall ---
+[INFO] com.macro.mall:mall:pom:1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] mall-mbg 1.0-SNAPSHOT .............................. SUCCESS [  3.192 s]
+[INFO] mall-admin 0.0.1-SNAPSHOT .......................... SUCCESS [  5.233 s]
+[INFO] mall-search 0.0.1-SNAPSHOT ......................... SUCCESS [  1.721 s]
+[INFO] mall-portal 0.0.1-SNAPSHOT ......................... SUCCESS [  1.402 s]
+[INFO] mall-demo 0.0.1-SNAPSHOT ........................... SUCCESS [  0.736 s]
+[INFO] mall 1.0-SNAPSHOT .................................. SUCCESS [  0.005 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.194 s
+[INFO] Finished at: 2024-03-19T14:16:22+08:00
+[INFO] ------------------------------------------------------------------------
