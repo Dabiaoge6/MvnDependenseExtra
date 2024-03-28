@@ -1,0 +1,26 @@
+import json
+import pandas as pd
+
+# 假设你的JSON数据保存在一个名为data.json的文件中
+with open('jsherpsbon.json', 'r') as file:
+    data = json.load(file)
+
+# 提取需要的字段
+extracted_data = []
+for package in data['packages']:
+    extracted_data.append({
+        'name': package['name'],
+        'versionInfo': package['versionInfo']
+    })
+
+
+for i in extracted_data:
+    name = str(i["name"]).split("jar")
+    i["name"] = ":".join(name)
+# 创建DataFrame
+df = pd.DataFrame(extracted_data)
+
+# 将DataFrame保存到Excel文件
+df.to_excel('jserpmurphy.xlsx', index=False)
+
+print("Excel文件已保存。")
